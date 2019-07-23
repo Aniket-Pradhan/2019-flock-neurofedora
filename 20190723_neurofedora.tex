@@ -1,8 +1,15 @@
-%% Ankur Sinha
+%% 2019 NeuroFedora contributors
 
 %% packages %%
 % support for coloured text
-\usepackage{color}
+\usepackage{xcolor}
+\definecolor{FedoraBlue}{cmyk}{1.0,0.46,0.0,0.0}
+\definecolor{FedoraDarkBlue}{cmyk}{1.0,0.57,0.0,0.38}
+\definecolor{FriendsMagenta}{cmyk}{0.0,0.8,0.4,0.0}
+\definecolor{FeaturesOrange}{cmyk}{0.0,0.5,1.0,0.0}
+\definecolor{FirstGreen}{cmyk}{0.5,0.0,1.0,0.0}
+\definecolor{FreedomPurple}{cmyk}{0.57,0.46,0.0,0.0}
+
 % IPA
 \usepackage{tipa}
 \usepackage[scale=2]{ccicons}
@@ -20,11 +27,8 @@
 % for strike through
 \usepackage[normalem]{ulem}
 % links, urls, refs
-\definecolor{links}{HTML}{2A1B81}
-% Fedora blue for the theme
-\definecolor{FedoraBlue}{HTML}{2A1B81}
 \usepackage{hyperref}
-\hypersetup{colorlinks,linkcolor=Green,urlcolor=links}
+\hypersetup{colorlinks,linkcolor=FreedomPurple,urlcolor=FreedomPurple}
 % graphics
 \usepackage{graphicx}
 % algorithm
@@ -35,22 +39,23 @@
 \usepackage{euler}
 
 % beamer theme
-% use defaults for theme
 \usetheme[numbering=fraction]{metropolis}
 \usefonttheme[onlymath]{serif}
 \setbeamerfont{footnote}{size=\tiny}
 \setbeamerfont{caption}{size=\tiny}
-\setbeamercolor{alerted text}{fg=Green}
+\setbeamercolor{alerted text}{fg=FeaturesOrange}
+\setbeamercolor{progress bar}{fg=FriendsMagenta}
+\setbeamercolor{title separator}{fg=FriendsMagenta}
+\setbeamercolor{frametitle}{bg=FedoraDarkBlue}
 
 % Not needed in metropolis, but in general footnote citation fixes: https://tex.stackexchange.com/questions/44217/how-can-i-stop-footcite-from-hijacking-my-beamer-columns
 % how to use multiple references to the same footnote: https://tex.stackexchange.com/questions/27763/beamer-multiple-references-to-the-same-footnote
 
 %% title %%
 \title[NeuroFedora]{\includegraphics[keepaspectratio,width=.25\textwidth]{images/NeuroFedoraLogo01.png}\\NeuroFedora}
-\subtitle{A ready to use Free and Open source platform for neuroscientists}
-\author[Ankur Sinha]{Ankur Sinha @ Fedora}
-\date[7/12/2018]{7/12/2018}
-
+\subtitle{FOSS and open (neuro) science}
+\author{NeuroFedora contributors}
+\date[]{}
 %% document begins %%
 \begin{document}
 
@@ -59,22 +64,31 @@
   \titlepage{}
 \end{frame}
 
-%% Three slides for 5 minutes seems good
-\section{Philosophy}
-\begin{frame}[c]{Free software}
-  Users should have the freedom to \alert{share, study, and modify} software\footnotemark.
+%% Three slides for 5 minutes, so 25--30 for 50 minutes.
+\section{FOSS and Free/Open Science}
+\begin{frame}[c]{Free/Open Source Software}
+  Ideal: users should have the freedom to \alert{share, study, and modify} software\footnotemark.
   \pause{}
 
   The \alert{user} is \href{https://www.fsf.org/about/what-is-free-software}{free}.
 
   \footnotetext[1]{\href{https://u.fsf.org/user-liberation}{Free software foundation}}
+  \note[item]{FOSS, even though focussed on software is really a social movement. Software is our way of spreading this freedom.}
+  \note[item]{Fedora similarly, is first a community that spreads freedom. The OS and products that we create are tools to achieve this.}
+  \note[item]{Fedora is NOT about creating an OS\@. Remember what the end goal is, and do not confuse the means with it.}
 \end{frame}
-\begin{frame}[c]{Free science}
-  \alert{Everyone} should have the freedom to \alert{share, study, and modify} scientific material\footnotemark.
+\begin{frame}[c]{Free/Open Source Science?}
+  Ideal: \alert{Everyone} should have the freedom to \alert{share, study, and modify} scientific material\footnotemark.
   \pause{}
 
   So, scientists, hobbyists, students \ldots\ should all have access to scientific material---irrespective of social status, location, age, nationality \ldots.
+
+  \pause{}
+  Especially given that \alert{social policy must be evidence based.}
   \footnotetext[2]{\href{http://opensourceforneuroscience.org/}{Open source for neuroscience}}
+  \note[item]{Science, similarly, is closely linked to society.}
+  \note[item]{Sure, a lot of Science is theoretical and cannot be applied in the short term future, but the goal is to improve OUR (society's) knowledge, not an individuals.}
+  \note[item]{Nowadays, this is becoming more important---we want our elected members to make decisions that are best for us, and this must be based on evidence so that there's a social consensus.}
 \end{frame}
 \section{A platform?}
 \begin{frame}[c]{The developer---user relationship: proprietary software}

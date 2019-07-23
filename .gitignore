@@ -42,7 +42,6 @@
 
 *.swp
 *.swo
-*latexmain
 
 comment.cut
 .ropeproject

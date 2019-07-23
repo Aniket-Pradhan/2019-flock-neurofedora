@@ -1,8 +1,7 @@
-20181206 NeuroFedora
+20190723 NeuroFedora
 ---------------------
 
-These are my slides for my seminar on NeuroFedora_ at the UH Biocomputation
-Group's weekly seminar.
+These are the slides for our talk on NeuroFedora_ at Flock 2019.
 
 License
 ========

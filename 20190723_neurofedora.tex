@@ -142,7 +142,7 @@
   \end{itemize}
   \note[item]{To take applications from the extreme ends of the spectrum: immediate clinical applications, immediate technological applications.}
 \end{frame}
-\section{Research pipeline}
+\section{How: research pipeline}
 \begin{frame}[c]{General workflow}
   \begin{figure}[h]
     \centering
@@ -152,74 +152,160 @@
   \end{figure}
 \end{frame}
 \begin{frame}[c]{Tools of the trade}
-  \begin{itemize}
-    \item \textcolor{FedoraBlue}{Experimental:}
-      \begin{itemize}
-        \item EEG, ECoG, intracellular and extracellular single and multi neuron recording,
-        \item CT, DOI, MRI, f-MRI, MEG, PET,
-      \end{itemize}
-      \pause{}
-    \item \textcolor{FriendsMagenta}{Data analysis:}
-      \begin{itemize}
-        \item Statistics,
-        \item Machine Learning, Big Data, Deep learning,
-      \end{itemize}
-      \pause{}
-    \item \textcolor{FeaturesOrange}{Theory} and \textcolor{FirstGreen}{modelling:}
-      \begin{itemize}
-        \item Simulators of all kinds, 
-      \end{itemize}
-      \pause{}
-    \item \textcolor{FedoraDarkBlue}{Dissemination of results\footnotemark[4].}
-  \end{itemize}
+  \textcolor{FedoraBlue}{Experimental:}
+    \begin{itemize}
+      \item EEG, ECoG, intracellular and extracellular single and multi neuron recording,
+      \item CT, DOI, MRI, f-MRI, MEG, PET,
+    \end{itemize}
+    \pause{}
+  \textcolor{FriendsMagenta}{Data analysis:}
+    \begin{itemize}
+      \item Statistics,
+      \item Machine Learning, Big Data, Deep learning,
+    \end{itemize}
+    \pause{}
+  \textcolor{FeaturesOrange}{Theory} and \textcolor{FirstGreen}{modelling:}
+    \begin{itemize}
+      \item Simulators of all kinds, 
+    \end{itemize}
   \note[item]{Lots of hardware and software is required for basic neuroscience research.}
-  \footnotetext[4]{To a non-specialist audience.}
 \end{frame}
-\begin{frame}[c]{FOSS and Free/Open Science share ideals}
+\begin{frame}[c]{Tools of the trade:\ II}
+  \textcolor{FedoraDarkBlue}{Dissemination of results\footnotemark[4].}
+  \begin{itemize}
+    \item visualisation,
+    \item academic writing,
+    \item non academic writing: blogging \ldots,
+    \item podcasting,
+    \item video making,
+    \item creating teaching materials,
+  \end{itemize}
+  \footnotetext[4]{also to a non-specialist audience.}
+  \note[item]{Often ignored, but not less important}
+\end{frame}
+\section{Free/Open (neuro) Science?}
+\begin{frame}[c]{A familiar ideal}
+  Free/Open science:\\\alert{Everyone} should have the freedom to \alert{share, study, and modify} scientific material.\\
+  \note[item]{This includes all research related activities, tools, and output, not only source code.}
+  \pause{}
+  \vspace{0.5cm}
   FOSS\@:\\\alert{Everyone} should have the freedom to \alert{share, study, and modify} software\footnotemark[5].\\
   \pause{}
   \vspace{0.5cm}
-  Free/Open science:\\\alert{Everyone} should have the freedom to \alert{share, study, and modify} scientific material.\\
-  \pause{}
-  \vspace{0.5cm}
-  \alert{Free/Open Science implicitly includes FOSS.}
+  \alert{Free/Open Science implicitly includes, and relies heavily on FOSS.}\\
   \footnotetext[5]{\href{https://u.fsf.org/user-liberation}{Free software foundation}}
 \end{frame}
-\begin{frame}[c]{FOSS and Open Science are catching on:}
-  \begin{itemize}
-    \item There are now active efforts to:
-      \begin{itemize}
-        \item use \alert{FOSS\footnotemark[6]},
-        \item standardise open access publishing,
-        \item use \alert{open formats} for data,
-      \end{itemize}
-  \end{itemize}
+\begin{frame}[c]{Now,}
+  \alert{FOSS is becoming the standard in research\footnotemark[6].}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{images/open-source-paper.png}
+  \end{figure}
   \footnotetext[6]{\href{http://opensourceforneuroscience.org/}{Open source for neuroscience}}
 \end{frame}
-\section{Fedora and Open Science?}
-\begin{frame}[c]{User/developer community}
+\section{What can we, Fedora, do to help?}
+\begin{frame}[c]{Neuroscience community: highly multidisciplinary}
   \begin{itemize}
     \item \alert{various specialities:} biologists, mathematicians, physicists, chemists, psychologists, \ldots, 
       \pause{}
     \item \alert{small proportion of trained software developers},
   \end{itemize}
 \end{frame}
-\begin{frame}[c]{Anecdotal observations on software}
+\begin{frame}[c]{(Anecdotal) notes on development of research software}
   \begin{itemize}
-    \item often single developer, small user-developer communities,
-    \item limited code quality,
-    \item limited use of established best practices,
-    \item limited testing for correctness (!),
-    \item limited maintenance,
-    \item often limited lifespan,
+    \item often \alert{single developer}, or small development teams,
+      \pause{}
+    \item limited \alert{access to hardware/resources},
+      \pause{}
+    \item limited \alert{code quality},
+      \pause{}
+    \item limited \alert{use of established best practices},
+      \pause{}
+    \item limited \alert{testing for correctness (!)},
+      \pause{}
+    \item limited \alert{maintenance, short-lived projects},
+      \pause{}
+    \item \alert{complex dependency chains},
+      \pause{}
+    \item lack of \alert{documentation and support},
+      \pause{}
+    \item lack of \alert{community development know-how},
   \end{itemize}
   \note[item]{Give how interdisciplinary neuroscience is, most researchers are NOT trained in development}
   \note[item]{This implies, and this is based on anecdotal evidence, that the software used in research is not of the best quality}
-  \note[item]{The silver lining is that a lot of it is FOSS, and more and more is becoming FOSS by default.}
 \end{frame}
-\begin{frame}[c]{Free/Open Science}
+\begin{frame}[c]{(Anecdotal) notes on users of research software}
   \begin{itemize}
-    \item FOSS for 
+    \item \alert{waste time and effort} installing (and reinstalling) their software stacks,
+      \pause{}
+    \item are \alert{unaware of helpful development tools},
+      \pause{}
+    \item \alert{rarely run test suites (!)},
+      \pause{}
+    \item \alert{rarely report bugs} upstream,
+      \pause{}
+    \item \alert{rarely send improvements} upstream,
   \end{itemize}
+  \note[item]{The other side of the bridge is the users}
+  \note[item]{Because they aren't trained, they have a hard time setting up and using the software}
+  \note[item]{If correctness of a tool cannot be verified, how can the correctness of the scientific result be claimed?}
+\end{frame}
+\begin{frame}[c]{We, at Fedora, are in a unique position}
+  \begin{itemize}
+    \item we \alert{liaison between upstream and users} already,
+      \pause{}
+    \item we \alert{follow best practices} in software development,
+      \pause{}
+    \item we have the \alert{infrastructure},
+      \pause{}
+    \item we constantly \alert{work to grow the community},
+      \pause{}
+    \item we \alert{learn from one another}---train as we work,
+      \pause{}
+    \item we \alert{disseminate} information to end-users,
+  \end{itemize}
+\end{frame}
+\begin{frame}[c]{So, we started NeuroFedora}
+  \textcolor{FedoraBlue}{Primary goal:}
+  \begin{itemize}
+    \item Provide a \alert{ready to use, integrated FOSS platform} for neuroscientists\footnotemark[7].
+  \end{itemize}
+  \pause{}
+  \textcolor{FirstGreen}{Secondary/collateral goals:}
+  \pause{}
+  \begin{itemize}
+    \item help \alert{improve the standard and maintenance} of tools,
+    \item help users \alert{develop software development skills},
+    \item \alert{make neuroscience accessible} to non-specialists,
+      \pause{}
+    \item \alert{make Fedora the go-to distribution for neuroscience}.
+  \end{itemize}
+  \footnotetext[7]{Researchers, academics, hobbyists, anyone!}
+\end{frame}
+\begin{frame}[c]{In essence,}
+  \textcolor{FedoraBlue}{NeuroFedora is:\\}
+  \begin{itemize}
+    \item \textcolor{FriendsMagenta}{merely leveraging pre-existing community resources to a new domain of software.}\\
+      \pause{}
+    \item \textcolor{FeaturesOrange}{taking the community model of FOSS to neuroscience research,}
+  \end{itemize}
+\end{frame}
+\begin{frame}[c]{Neuroscience: current metrics}
+  \begin{itemize}
+    \item \textcolor{FirstGreen}{15 active contributors:}
+      \begin{itemize}
+        \item 10 package maintainers,
+        \item 5 designers, newcomers,
+        \item only 5 from a neuroscience background,
+      \end{itemize}
+      \pause{}
+    \item \textcolor{FriendsMagenta}{Software:}
+      \begin{itemize}
+        \item 105 packages available in total\footnotemark.
+        \item \textasciitilde{}160 in queue\footnotemark.
+      \end{itemize}
+  \end{itemize}
+  \footnotetext[8]{\href{https://src.fedoraproject.org/group/neuro-sig}{src.fedoraproject.org: Neuro-SIG}}
+  \footnotetext[9]{\href{https://pagure.io/neuro-sig/NeuroFedora/issues?status=Open&tags=T\%3A+Software}{Pagure.io: Neuro-SIG: issues}}
 \end{frame}
 \end{document}

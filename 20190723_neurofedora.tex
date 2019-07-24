@@ -19,6 +19,7 @@
 \usepackage{jneurosci}
 \usepackage{subfig}
 \usepackage[T1]{fontenc}
+\usepackage{minted}
 \usepackage[utf8]{inputenc}
 \usepackage[style=verbose,backend=biber,autocite=footnote]{biblatex}
 \addbibresource{/home/asinha/Documents/01_Readables/00_research_papers/masterbib.bib}
@@ -47,6 +48,8 @@
 \setbeamercolor{progress bar}{fg=FriendsMagenta}
 \setbeamercolor{title separator}{fg=FriendsMagenta}
 \setbeamercolor{frametitle}{bg=FedoraDarkBlue}
+
+\renewcommand{\figurename}{}
 
 % Not needed in metropolis, but in general footnote citation fixes: https://tex.stackexchange.com/questions/44217/how-can-i-stop-footcite-from-hijacking-my-beamer-columns
 % how to use multiple references to the same footnote: https://tex.stackexchange.com/questions/27763/beamer-multiple-references-to-the-same-footnote
@@ -359,41 +362,108 @@
 \end{frame}
 \section{Myths}
 \begin{frame}[c]{Myth 1}
-  (Neuro) science is all about sitting in labs and working on core research.\\
+  \textcolor{FriendsMagenta}{(Neuro) science is all about working on \enquote{core research}.}\\
   \vspace{0.5cm}
   \pause{}
-  NO!\ Core research is only one aspect of science!\\
-  \vspace{0.2cm}
-  For example, development of supporting infrastructure and dissemination via writing, audio-visual methods are necessary components of science.
+  \textcolor{FirstGreen}{Wrong! There is more to (neuro) science!}\\
   \note[item]{The learning curve is similar to what non-techies experience when they try to join FOSS\@. It takes similar effort to gain the required domain specific knowledge.}
 \end{frame}
-\begin{frame}[c]{Myth 1: example: Open Source brain}
+\begin{frame}[c]{Myth buster example: Open Source Brain}
   \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{images/OSB.png}
   \end{figure}
   \footnotetext[12]{\href{https://opensourcebrain.org}{opensourcebrain.org}}
 \end{frame}
-\begin{frame}[c]{Myth 1: example: Openworm }
+\begin{frame}[c]{Myth buster example: OpenWorm }
   \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{images/openworm.png}
   \end{figure}
   \footnotetext[13]{\href{https://openworm.org}{openworm.org}}
 \end{frame}
-\begin{frame}[c]{Myth 1: example: Rebecca Ivatts }
-  \begin{figure}[h]
-    \centering
-    \includegraphics[height=0.8\textheight]{images/rebeccaivatts-dementia.jpg}
-  \end{figure}
-  \footnotetext[14]{\href{https://rebeccaivatts.com}{rebeccaivatts.com}}
+\begin{frame}[c]{Myth buster example: Science art}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[height=0.6\textheight]{images/rebeccaivatts-dementia.jpg}
+        \caption{Snail: related to Dementia}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[height=0.6\textheight]{images/rebeccaivatts-pieces-of-mind.jpg}
+        \caption{Pieces of the Mind (2014)}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \footnotetext[14]{\href{https://rebeccaivatts.com}{rebeccaivatts.com}, \textcopyright{} Rebecca Ivatts 2019}
 \end{frame}
 \begin{frame}[c]{Myth 2}
-  Only researchers can do (neuro) science!\\
-  It's so hard!\\
+  \textcolor{FriendsMagenta}{Only researchers can do (neuro) science. It's too hard.}\\
   \vspace{0.5cm}
   \pause{}
-  NO!\ Everyone can do science! Make it a hobby!
+  \textcolor{FirstGreen}{Wrong! Everyone can do (neuro) science!}\\
   \note[item]{The learning curve is similar to what non-techies experience when they try to join FOSS\@. It takes similar effort to gain the required domain specific knowledge.}
+\end{frame}
+\begin{frame}[c]{Myth buster example: understanding learning}
+  \note[item]{We learn when synapses change in the brain}
+  \note[item]{As an example, let's say we have a neuron that was activated by a smell.}
+  \note[item]{Later, we found out that that was the smell of some food, say curry.}
+  \note[item]{Because these neurons fired one after the other here, this synapse is strengthened.}
+  \note[item]{When this happens repeatedly, the synapse is strengthened again and again.}
+  \note[item]{Until, the faintest whiff of the smell reminds you of the food!}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \only<1>{\input{images/ltp-schematic-1.tex}}
+        \only<2>{\input{images/ltp-schematic-2.tex}}
+        \only<3>{\input{images/ltp-schematic-3.tex}}
+        \only<4>{\input{images/ltp-schematic-4.tex}}
+        \only<5>{\input{images/ltp-schematic-5.tex}}
+      \end{figure}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \input{images/spike-train.tex}
+      \end{figure}
+    \end{column}
+  \end{columns}
+  \footnotetext[15]{Spike-timing dependent plasticity (STDP): underlies learning in the Brain.}
+  \note[item]{Of course, the more you look at it, the more information you find, but that doesn't mean that we can't study or apply it.}
+\end{frame}
+\begin{frame}[fragile]{Myth buster example: an example simulation in NEST}
+  \begin{minted}[fontsize=\tiny]{python}
+  # sudo dnf install python3-nest
+  import pylab
+  import nest
+  import nest.voltage_trace
+
+  weight = 20.0
+  delay = 1.0
+  stim = 1000.0
+
+  # create two neurons and a voltmeter
+  neuron1 = nest.Create("iaf_psc_alpha")
+  neuron2 = nest.Create("iaf_psc_alpha")
+  voltmeter = nest.Create("voltmeter")
+
+  # give the first neuron a stimulus, connect it to the second one, watch the second spike
+  nest.SetStatus(neuron1, {"I_e": stim})
+  nest.Connect(neuron1, neuron2, syn_spec={'weight': weight, 'delay': delay})
+  nest.Connect(voltmeter, neuron2)
+
+  nest.Simulate(100.0)
+
+  nest.voltage_trace.from_device(voltmeter)
+  nest.voltage_trace.show()
+  \end{minted}
+  \note[item]{This is all it takes to simulate two neurons that are connected through a synapse.}
+  \note[item]{Of course, this is a simple example, but the point is---it's just programming with a little bit of domain knowledge.}
+  \footnotetext[16]{\href{https://nest-simulator.org}{nest-simulator.org}}
 \end{frame}
 \end{document}

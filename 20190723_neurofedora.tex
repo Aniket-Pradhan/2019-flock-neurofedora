@@ -171,7 +171,7 @@
   \note[item]{Lots of hardware and software is required for basic neuroscience research.}
 \end{frame}
 \begin{frame}[c]{Tools of the trade:\ II}
-  \textcolor{FedoraDarkBlue}{Dissemination of results\footnotemark[4].}
+  \textcolor{FedoraDarkBlue}{Tools for the dissemination of knowledge\footnotemark[4]:}
   \begin{itemize}
     \item visualisation,
     \item academic writing,
@@ -180,6 +180,8 @@
     \item video making,
     \item creating teaching materials,
   \end{itemize}
+  \pause{}
+  \textcolor{FirstGreen}{Collaborative tools and utilities.}
   \footnotetext[4]{also to a non-specialist audience.}
   \note[item]{Often ignored, but not less important}
 \end{frame}
@@ -278,7 +280,7 @@
     \item help users \alert{develop software development skills},
     \item \alert{make neuroscience accessible} to non-specialists,
       \pause{}
-    \item \alert{make Fedora the go-to distribution for neuroscience}.
+    \item \textcolor{FriendsMagenta}{make Fedora the go-to distribution for neuroscience}.
   \end{itemize}
   \footnotetext[7]{Researchers, academics, hobbyists, anyone!}
 \end{frame}
@@ -290,8 +292,10 @@
     \item \textcolor{FeaturesOrange}{taking the community model of FOSS to neuroscience research,}
   \end{itemize}
 \end{frame}
-\begin{frame}[c]{Neuroscience: current metrics}
+\begin{frame}[c]{NeuroFedora: current metrics}
   \begin{itemize}
+    \item \alert{less than a year old\footnotemark[8],}
+      \pause{}
     \item \textcolor{FirstGreen}{15 active contributors:}
       \begin{itemize}
         \item 10 package maintainers,
@@ -299,13 +303,97 @@
         \item only 5 from a neuroscience background,
       \end{itemize}
       \pause{}
-    \item \textcolor{FriendsMagenta}{Software:}
+    \item \textcolor{FriendsMagenta}{software:}
       \begin{itemize}
-        \item 105 packages available in total\footnotemark.
-        \item \textasciitilde{}160 in queue\footnotemark.
+        \item 105 packages ready to install\footnotemark[9].
+        \item \textasciitilde{}160 in queue\footnotemark[10].
+      \end{itemize}
+      \pause{}
+    \item \textcolor{FedoraBlue}{poster presented at annual Computational Neuroscience Conference (CNS), 2019\footnotemark[11].}
+  \end{itemize}
+  \footnotetext[8]{in its second iteration}
+  \footnotetext[9]{\href{https://src.fedoraproject.org/group/neuro-sig}{src.fedoraproject.org: Neuro-SIG}}
+  \footnotetext[10]{\href{https://pagure.io/neuro-sig/NeuroFedora/issues?status=Open&tags=T\%3A+Software}{Pagure.io: Neuro-SIG: issues}}
+  \footnotetext[11]{\href{https://neurofedora.github.io/2019/07/11/neurofedora-poster-at-cns-2019.html}{NeuroFedora blog: poster at CNS*2019}}
+\end{frame}
+\begin{frame}[c]{NeuroFedora: future plans}
+  \begin{itemize}
+    \item \alert{make more software available,}
+      \begin{itemize}
+        \item \alert{via modularity,}
+        \item \alert{via containers,}
+      \end{itemize}
+      \pause{}
+    \item \textcolor{FirstGreen}{improve documentation, and support,}
+      \pause{}
+    \item \textcolor{FriendsMagenta}{increase community,}
+      \begin{itemize}
+        \item \textcolor{FriendsMagenta}{convert research user base into FOSS contributors,}
+        \item \textcolor{FriendsMagenta}{convert FOSS contributor base into users,}
       \end{itemize}
   \end{itemize}
-  \footnotetext[8]{\href{https://src.fedoraproject.org/group/neuro-sig}{src.fedoraproject.org: Neuro-SIG}}
-  \footnotetext[9]{\href{https://pagure.io/neuro-sig/NeuroFedora/issues?status=Open&tags=T\%3A+Software}{Pagure.io: Neuro-SIG: issues}}
+\end{frame}
+\begin{frame}[c]{NeuroFedora: what you can do}
+  \textcolor{FriendsMagenta}{Anything! It's just more of Fedora!}
+  \pause{}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item packaging,
+        \item testing
+        \item containers,
+        \item documentation,
+        \item evangelism,
+        \item marketing,
+        \item design,
+        \item \ldots,
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.8\linewidth]{images/NeuroFedoraBadge.png}
+      \end{figure}
+    \end{column}
+  \end{columns}
+\end{frame}
+\section{Myths}
+\begin{frame}[c]{Myth 1}
+  (Neuro) science is all about sitting in labs and working on core research.\\
+  \vspace{0.5cm}
+  \pause{}
+  NO!\ Core research is only one aspect of science!\\
+  \vspace{0.2cm}
+  For example, development of supporting infrastructure and dissemination via writing, audio-visual methods are necessary components of science.
+  \note[item]{The learning curve is similar to what non-techies experience when they try to join FOSS\@. It takes similar effort to gain the required domain specific knowledge.}
+\end{frame}
+\begin{frame}[c]{Myth 1: example: Open Source brain}
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{images/OSB.png}
+  \end{figure}
+  \footnotetext[12]{\href{https://opensourcebrain.org}{opensourcebrain.org}}
+\end{frame}
+\begin{frame}[c]{Myth 1: example: Openworm }
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{images/openworm.png}
+  \end{figure}
+  \footnotetext[13]{\href{https://openworm.org}{openworm.org}}
+\end{frame}
+\begin{frame}[c]{Myth 1: example: Rebecca Ivatts }
+  \begin{figure}[h]
+    \centering
+    \includegraphics[height=0.8\textheight]{images/rebeccaivatts-dementia.jpg}
+  \end{figure}
+  \footnotetext[14]{\href{https://rebeccaivatts.com}{rebeccaivatts.com}}
+\end{frame}
+\begin{frame}[c]{Myth 2}
+  Only researchers can do (neuro) science!\\
+  It's so hard!\\
+  \vspace{0.5cm}
+  \pause{}
+  NO!\ Everyone can do science! Make it a hobby!
+  \note[item]{The learning curve is similar to what non-techies experience when they try to join FOSS\@. It takes similar effort to gain the required domain specific knowledge.}
 \end{frame}
 \end{document}

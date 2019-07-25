@@ -24,6 +24,10 @@ handouts_print: handouts 20190723_neurofedora_handouts_print.tex
 handouts_space: 20190723_neurofedora_handouts_with_space.tex
 	latexmk -pdf -pdflatex="pdflatex -interactive=nonstopmode" -use-make 20190723_neurofedora_handouts_with_space.tex
 
+deps:
+	sudo dnf install 'tex(pgfpages.sty)'  'tex(pdfpages.sty)' 'tex(handoutWithNotes.sty)' 'tex(pdfpages.sty)' 'tex(pgfpages.sty)' 'tex(xcolor.sty)' 'tex(tipa.sty)' 'tex(ccicons.sty)' 'tex(amssymb.sty)' 'tex(tikz.sty)' 'tex(jneurosci.sty)' 'tex(subfig.sty)' 'tex(fontenc.sty)' 'tex(inputenc.sty)' 'tex(biblatex.sty)' 'tex(opensans.sty)' 'tex(ulem.sty)' 'tex(hyperref.sty)' 'tex(graphicx.sty)' 'tex(algorithmic.sty)' 'tex(textcomp.sty)' 'tex(wrapfig.sty)' 'tex(textgreek.sty)' 'tex(euler.sty)' 'tex(minted.sty)' 'tex(import.sty)' --setopt=strict=0
+
+
 clean:
 	rm -fv *.aux *.bbl *.blg *.log *.nav *.out *.snm *.toc *.dvi *.vrb *.bcf *.run.xml *.cut *.lo*
 	latexmk -c
